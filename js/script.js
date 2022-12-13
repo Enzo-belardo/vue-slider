@@ -37,17 +37,19 @@ createApp({
                this.indexImage = 0 
             }
             
-
         },
         previus(){
             this.indexImage--
-            if(this.indexImage <= 0){
-                this.indexImage = 5
+            if(this.indexImage < 0){
+                this.indexImage = this.slides.length - 1
             }
+        },
 
+        setImage(index){
+            this.indexImage = index ;
         }
+
 
     }
 }).mount('#app')
 
-console.log(slides);
